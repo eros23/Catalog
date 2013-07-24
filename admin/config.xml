@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <plugin>
-	<name>shop_main</name>
-	<displayName>Gestione Negozio</displayName>
+	<name>catalog_main</name>
+	<displayName>Gestione Catalogo</displayName>
 	<tab>contents</tab>
-    <description>Gestione del negozio</description>
+    <description>Gestione del catalogo</description>
     <author>LGNuke</author>
     <authorUrl>http://www.lgnuke.com</authorUrl>
 </plugin>
