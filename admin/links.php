@@ -8,6 +8,6 @@ if(!defined('ADMIN_FILE')) {
    die("Access Denied");
 }
 global $admin_file;
-adminmenu("" . $admin_file . ".php?op=shop_main", "" . _CATALOG . "", "catalog.png");
+adminmenu("" . $admin_file . ".php?op=catalog_main", "" . _CATALOG . "", "catalog.png");
 
 ?>
