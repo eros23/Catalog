@@ -49,4 +49,9 @@ if ($row2['radminsuper'] == 1 || $auth_user == 1)
     include ("footer.php");
 }
 
+
+function catalog_main() {
+echo "Ciao";
+	
+}
 ?>
