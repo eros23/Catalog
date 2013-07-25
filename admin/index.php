@@ -19,6 +19,7 @@ if (!defined('ADMIN_FILE'))
 	  if ($multilingual == 1) { $querylang = 'AND (language=\''.$currentlang.'\' OR language=\'\')'; } 
 	else { $querylang = ''; }
 	  if (isset($_GET['daynum'])) { $daynum = addslashes($_GET['daynum']); } else { $daynum = ''; }
+	  if (isset($_GET['page'])) { $page = intval($_GET['page']); } else { $page = 1; }
 
 
 # =================================================================================== #
