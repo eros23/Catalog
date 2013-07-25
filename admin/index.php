@@ -36,12 +36,12 @@ if (isset($_GET['page'])) {
 }
 if ($row2['radminsuper'] == 1 || $auth_user == 1) {
 
-  function catalog_main($daynum) {
+  function catalog_main($daynum=10) {
     global $db, $prefix, $admin, $admin_file, $language, $module_name, $multilingual, $name_prefix, $page;
     include_once ('header.php');
     $ofsppg = 10; // Items per page
     $ofsbgn = ($page * $ofsppg) - $ofsppg;
-    $Realdate = mktime();
+    $Realdate = time();
     $olddate = $Realdate - $daynum * 24 * 60 * 60;
     $d = date("Ymd", $olddate);
     $result = $db->sql_query('SELECT * 
@@ -68,7 +68,7 @@ if ($row2['radminsuper'] == 1 || $auth_user == 1) {
         <th class="optional"><?php echo '' . _CATALOG_ORDERNUMBER . ''; ?></th>
         <th class="essential persist"><?php echo '' . _NAME . ''; ?></th>
         <th class="optional"><?php echo 'Memo'; ?></th>
-        <th class="optional"><?php echo '' . _TOTAL . ''; ?></th>
+        <th class="optional"><?php echo '' . _CATALOG_TOTAL . ''; ?></th>
         <th class="optional"><?php echo '' . _CATALOG_PAYD . ''; ?></th>
         <th class="essential"><?php echo '' . _CATALOG_ORDERED . ''; ?></th>
         <th class="essential"><?php echo '' . _CATALOG_SHIPPED . ''; ?></th>

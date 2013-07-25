@@ -13,6 +13,7 @@ define('_CATALOG_MANAGER',			'Menu Catalogo');
 define('_CATALOG_CONFIG',			'Configurazione Modulo');
 define('_CATALOG_SHIPPING',			'Metodi Spedizioni');
 define('_CATALOG_PAYMENT',			'Metodi Pagamenti');
+define('_CATALOG_TOTAL',			'Totale');
 
 
 
