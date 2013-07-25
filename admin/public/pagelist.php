@@ -90,9 +90,9 @@ function catalog_pagelist() {
 		   $bid2 = intval($row_res2['id_catalog']);
 		   $con2 = ''.$bid2.'';
 		   $oplink = ''.$name_prefix.'_pagelist';
- 		   $pag_edit    = '<a href="'.$admin_file.'.php?op='.$name_prefix.'_pageedit&id_catalog='.$id_catalog.'&oplink='.$oplink.'&page='.$page.'">'._IMG_EDIT.'</a>';
-		   $pag_double  = '<a href="'.$admin_file.'.php?op='.$name_prefix.'_pagedouble&id_catalog='.$id_catalog.'&oplink='.$oplink.'&page='.$page.'">'._IMG_DOUBLE.'</a>';
-		   $pag_delete  = '<a href="'.$admin_file.'.php?op='.$name_prefix.'_pagedelete&id_catalog='.$id_catalog.'&oplink='.$oplink.'&page='.$page.'">'._IMG_DELETE.'</a>';
+ 		   $pag_edit    = '<a href="'.$admin_file.'.php?op='.$name_prefix.'_pageedit&id_catalog='.$id_catalog.'" title="Edit"><i class="splashy-document_letter_edit"></i></a>';
+		   $pag_double  = '<a href="'.$admin_file.'.php?op='.$name_prefix.'_pagedouble&id_catalog='.$id_catalog.'" title="Copy"><i class="splashy-document_copy"></i></a>';
+		   $pag_del  = '<a href="'.$admin_file.'.php?op='.$name_prefix.'_pagedel&id_catalog='.$id_catalog.'" title="Delete"><i class="splashy-document_letter_remove"></i></a>';
 		   $pag_desc    = '<a href="'.$admin_file.'.php?op='.$name_prefix.'_desc&id_catalog='.$id_catalog.'&oplink='.$oplink.'&page='.$page.'">'._IMG_DESC.'</a>';
 		   $pag_service = '<a href="'.$admin_file.'.php?op='.$name_prefix.'_servlist&id_catalog='.$id_catalog.'&oplink='.$oplink.'&page='.$page.'">'._IMG_SERVICE.'</a>';
 		   $pag_option  = '<a href="'.$admin_file.'.php?op='.$name_prefix.'_optlist&id_catalog='.$id_catalog.'&oplink='.$oplink.'&page='.$page.'">'._IMG_OPTION.'</a>';
@@ -100,15 +100,15 @@ function catalog_pagelist() {
 		   $link_url = 'modules.php?name='.$module_name.'&amp;op=catalog_product&amp;id_catalog='.$id_catalog.'';
 		   ?>
            <tr>
-		     <td align="center"><span class="atiny"><?php echo ''.$weight.''; ?></span></td>
-		 	 <td align="center" class="thumbnail">
+		     <td><span class="atiny"><?php echo ''.$weight.''; ?></span></td>
+		 	 <td>
 			 <?php
 			 if (empty($codehtl)) { $newimage = ''.$id_catalog.'/'.$imgfile.''; } else { $newimage = ''.$codehtl.'/'.$imgfile.''; }
 			 $image_path = 'uploads/images/products/'.$newimage.'';
              $thumb_path = '<img src="'.image_cache('uploads/images/products/'.$newimage,180,135).'" />';		
-             $mini_path = '<img src="'.image_cache('uploads/images/products/'.$newimage,30,23).'" rel="#photo'.$id_catalog.'" />';		
+             $mini_path = '<img src="'.image_cache('uploads/images/products/'.$newimage,50,38).'" />';		
           if ($imgfile != '' && file_exists($image_path)) 
-             { echo '<a href="'.$image_path.'" title="Image_4 title long title long title long">'.$thumb_path.'</a>'; } 
+             { echo '<a href="'.$image_path.'" title="Image_4 title long title long title long">'.$mini_path.'</a>'; } 
         else { echo '<img src="images/no_images.jpg" border="0" width="30" height="20" />'; }
 			 ?>
              </td>
@@ -121,11 +121,11 @@ function catalog_pagelist() {
 	      if ($con2) { echo '<a href="'.$admin_file.'.php?op='.$name_prefix.'_pagechgorder&weight='.$weight.'&bidori='.$id_catalog.'&weightrep='.$weight3.'&bidrep='.$con2.'&oplink='.$oplink.'&page='.$page.'">'._IMG_BLOCKUP.'</a>'; }
 	         ?>
              </td>
-		     <td align="center"><span class="atiny"><?php echo ''.$codepro.''; ?></span></td>
-		     <td align="center"><span class="atiny"><?php echo ''.$mydate.''; ?></span></td>
-		     <td align="center"><span class="atiny"><?php echo ''.$ctitle.'';?></span></td>
-		     <td align="center"><span class="atiny"><?php echo ''.$alanguage.''; ?></span></td>
-		     <td align="center" class="atiny">
+		     <td><span class="atiny"><?php echo ''.$codepro.''; ?></span></td>
+		     <td><span class="atiny"><?php echo ''.$mydate.''; ?></span></td>
+		     <td><span class="atiny"><?php echo ''.$ctitle.'';?></span></td>
+		     <td><span class="atiny"><?php echo ''.$alanguage.''; ?></span></td>
+		     <td class="atiny">
 			 <?php
           if ($mystatus == 0) { echo '<span class="label label-danger sl_status">'._CATALOG_NOACTIVE.'</span>'; }
 	  elseif ($mystatus == 1) { echo '<span class="label label-success sl_status">'._CATALOG_ACTIVE.'</span>'; }
@@ -135,8 +135,8 @@ function catalog_pagelist() {
 	    else {}
 			 ?>
              </td>
-		 	 <td align="center"><span class="atiny"><?php echo ''.$counter.''; ?></span></td>
-		 	 <td align="center"><?php echo ''.$pag_edit.'&nbsp;'.$pag_double.'&nbsp;'.$pag_delete.'&nbsp;'.$pag_option.'&nbsp;'.$pag_desc.'&nbsp;'.$pag_service.''; ?></td>
+		 	 <td><span class="atiny"><?php echo ''.$counter.''; ?></span></td>
+		 	 <td><?php echo ''.$pag_edit.'&nbsp;'.$pag_double.'&nbsp;'.$pag_del.'&nbsp;'.$pag_option.'&nbsp;'.$pag_desc.'&nbsp;'.$pag_service.''; ?></td>
 	 	   </tr> 
 		   <?php
 		   }
