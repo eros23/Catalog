@@ -25,9 +25,9 @@ if ($multilingual == 1) {
   $querylang = '';
 }
 if (isset($_GET['daynum'])) {
-  $daynum = addslashes($_GET['daynum']);
+  $daynum = intval($_GET['daynum']);
 } else {
-  $daynum = '';
+  $daynum = 10;
 }
 if (isset($_GET['page'])) {
   $page = intval($_GET['page']);
