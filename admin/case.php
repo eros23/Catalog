@@ -1,26 +1,24 @@
-<?php
+<?php  // Last Updated: 25/07/2013
 
-/**
- * @Author Laganà Gabriele
+/* @Author Laganà Gabriele
  * @Copyright LGNuke http://www.lgnuke.org
- * @Email info@lgnuke.org
- */
+ * @Email info@lgnuke.org */
 
-if (!defined('ADMIN_FILE'))
-{
-    die("Access Denied");
-}
-$module_name = "Catalog";
+	  if (!defined('ADMIN_FILE')) 
+	  	 { die( include('../../../error_file/alert.php') ); }
 
 
-switch ($op)
-{
+# =================================================================================== #
+		 $module_name = basename(dirname(dirname(__FILE__)));
+// include_once ('modules/'.$module_name.'/admin/language/lang-italian.php');
 
-    case "catalog_main":
+  switch ($op)
+         {
 
-        include ("modules/$module_name/admin/index.php");
-        break;
+    case 'catalog_main':
+ include_once('modules/'.$module_name.'/admin/index.php');
+   break;
+         }
 
-}
 
 ?>

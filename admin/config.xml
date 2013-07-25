@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <plugin>
-	<name>catalog_main</name>
+	<name>catalog_main&daynum=30</name>
 	<displayName>Gestione Catalogo</displayName>
 	<tab>contents</tab>
     <description>Gestione del catalogo</description>
