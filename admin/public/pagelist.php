@@ -22,23 +22,22 @@ function catalog_pagelist() {
     <a href="#" class="clear unselectable"></a>
   </div>
     
-        
 <div class="row-fluid">
   <div class="span12">
-    <table class="table table-striped table-bordered mediaTable">
+    <table class="table table-bordered table-striped table_vam" id="dt_gal">
       <thead>
       <tr>
-        <th class="optional">#</span></th>
-        <th class="optional"><?php echo ''._ICON.''; ?></th>
-        <th class="essential persist"><?php echo ''._TITLE.''; ?></th>
-        <th class="optional"><?php echo ''._WEIGHT.''; ?></th>
-        <th class="optional"><?php echo ''._CATALOG_CODE.''; ?></th>
-        <th class="optional"><?php echo ''._DATEINS.''; ?></th>
-        <th class="optional"><?php echo ''._CATEGORY.''; ?></th>
-        <th class="optional"><?php echo ''._LANGUAGE.''; ?></th>
-        <th class="optional"><?php echo ''._STATUS.''; ?></th>
-        <th class="optional"><?php echo ''._HITS.''; ?></th>
-        <th class="essential"><?php echo ''._FUNCTIONS.''; ?></th>
+        <th>#</th>
+        <th style="width:60px"><?php echo ''._ICON.''; ?></th>
+        <th><?php echo ''._TITLE.''; ?></th>
+        <th><?php echo ''._WEIGHT.''; ?></th>
+        <th><?php echo ''._CATALOG_CODE.''; ?></th>
+        <th><?php echo ''._DATEINS.''; ?></th>
+        <th><?php echo ''._CATEGORY.''; ?></th>
+        <th><?php echo ''._LANGUAGE.''; ?></th>
+        <th><?php echo ''._STATUS.''; ?></th>
+        <th><?php echo ''._HITS.''; ?></th>
+        <th><?php echo ''._FUNCTIONS.''; ?></th>
       </tr>
       </thead>
       <tbody>
@@ -93,9 +92,9 @@ function catalog_pagelist() {
  		   $pag_edit    = '<a href="'.$admin_file.'.php?op='.$name_prefix.'_pageedit&id_catalog='.$id_catalog.'" title="Edit"><i class="splashy-document_letter_edit"></i></a>';
 		   $pag_double  = '<a href="'.$admin_file.'.php?op='.$name_prefix.'_pagedouble&id_catalog='.$id_catalog.'" title="Copy"><i class="splashy-document_copy"></i></a>';
 		   $pag_del  = '<a href="'.$admin_file.'.php?op='.$name_prefix.'_pagedel&id_catalog='.$id_catalog.'" title="Delete"><i class="splashy-document_letter_remove"></i></a>';
-		   $pag_desc    = '<a href="'.$admin_file.'.php?op='.$name_prefix.'_desc&id_catalog='.$id_catalog.'&oplink='.$oplink.'&page='.$page.'">'._IMG_DESC.'</a>';
-		   $pag_service = '<a href="'.$admin_file.'.php?op='.$name_prefix.'_servlist&id_catalog='.$id_catalog.'&oplink='.$oplink.'&page='.$page.'">'._IMG_SERVICE.'</a>';
-		   $pag_option  = '<a href="'.$admin_file.'.php?op='.$name_prefix.'_optlist&id_catalog='.$id_catalog.'&oplink='.$oplink.'&page='.$page.'">'._IMG_OPTION.'</a>';
+		   $pag_option  = '<a href="'.$admin_file.'.php?op='.$name_prefix.'_optlist&id_catalog='.$id_catalog.'" title="Calendar"><i class="splashy-calendar_month"></i></a>';
+		   $pag_desc    = '<a href="'.$admin_file.'.php?op='.$name_prefix.'_pagedesc&id_catalog='.$id_catalog.'" title="Description"><i class="splashy-view_list"></i></a>';
+		   $pag_service = '<a href="'.$admin_file.'.php?op='.$name_prefix.'_servlist&id_catalog='.$id_catalog.'" title="Service"><i class="splashy-hcards"></i></a>';
 //		   $pag_gallery = '<a href="'.$admin_file.'.php?op='.$name_prefix.'_gallist&id_catalog='.$id_catalog.'&oplink='.$oplink.'&page='.$page.'">'._IMG_GALLERY.'</a>';
 		   $link_url = 'modules.php?name='.$module_name.'&amp;op=catalog_product&amp;id_catalog='.$id_catalog.'';
 		   ?>
@@ -108,7 +107,7 @@ function catalog_pagelist() {
              $thumb_path = '<img src="'.image_cache('uploads/images/products/'.$newimage,180,135).'" />';		
              $mini_path = '<img src="'.image_cache('uploads/images/products/'.$newimage,50,38).'" />';		
           if ($imgfile != '' && file_exists($image_path)) 
-             { echo '<a href="'.$image_path.'" title="Image_4 title long title long title long">'.$mini_path.'</a>'; } 
+             { echo '<a href="'.$image_path.'" title="" class="cbox_single thumbnail">'.$mini_path.'</a>'; } 
         else { echo '<img src="images/no_images.jpg" border="0" width="30" height="20" />'; }
 			 ?>
              </td>
