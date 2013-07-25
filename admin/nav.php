@@ -3,10 +3,11 @@ global $op,$admin_file;
 ?>
 <li class="dropdown"> <a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-book icon-white"></i> Gestione Prodotti <b class="caret"></b></a>
   <ul class="dropdown-menu">
-    <li><a href="<?php echo $admin_file;?>.php?op=catalog_add_product">Aggiungi Prodotto</a></li>
-    <li><a href="<?php echo $admin_file;?>.php?op=catalog_add_bundling">Associa Prodotti</a></li>
-    <li><a href="<?php echo $admin_file;?>.php?op=catalog_list_bundling">Lista Prodotti Associati</a></li>
-    <li><a href="<?php echo $admin_file;?>.php?op=catalog_list_product">Lista Prodotti</a></li>
+    <li><a href="<?php echo $admin_file;?>.php?op=catalog_pagelist">Lista Prodotti</a></li>
+    <li><a href="<?php echo $admin_file;?>.php?op=catalog_pageadd">Aggiungi Prodotto</a></li>
+    <li><a href="<?php echo $admin_file;?>.php?op=catalog_pageedit">Modifica Prodotto</a></li>
+    <li><a href="<?php echo $admin_file;?>.php?op=catalog_pagedel">Cancella Prodotto</a></li>
+    <li><a href="<?php echo $admin_file;?>.php?op=catalog_pagedouble">Duplica Prodotto</a></li>
   </ul>
 </li>
 <li class="dropdown"> <a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-list-alt icon-white"></i> Fornitori <b class="caret"></b></a>

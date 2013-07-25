@@ -15,6 +15,22 @@ define('_CATALOG_SHIPPING',			'Metodi Spedizioni');
 define('_CATALOG_PAYMENT',			'Metodi Pagamenti');
 define('_CATALOG_TOTAL',			'Totale');
 
+// PRODUCT LIST
+define('_CATALOG_PAGELIST',			'Elenco Prodotti');
+define('_CATALOG_PAGEEMPTY',		'<strong>ATTENZIONE!!</strong><br />Non ci sono Prodotti pubblicati nel database.');
+define('_CATALOG_CODE',				'Codice Prodotto');
+
+// PRODUCT ADD
+define('_CATALOG_PAGEADD',			'Aggiungi Prodotto');
+
+// PRODUCT EDIT
+define('_CATALOG_PAGEEDIT',			'Modifica Prodotto');
+
+// PRODUCT DELETE
+define('_CATALOG_PAGEDEL',			'Cancella Prodotto');
+
+// PRODUCT DOUBLE
+define('_CATALOG_PAGEDOUBLE',		'Duplica Prodotto');
 
 
 // ORDER

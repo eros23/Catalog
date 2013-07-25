@@ -16,6 +16,13 @@
          {
 
     case 'catalog_main':
+	
+    case 'catalog_pagelist':
+    case 'catalog_pageadd':
+    case 'catalog_pageedit':
+    case 'catalog_pagedel':
+    case 'catalog_pagedouble':
+	
  include_once('modules/'.$module_name.'/admin/index.php');
    break;
          }
