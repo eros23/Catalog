@@ -69,7 +69,7 @@ function catalog_pagelist() {
 		   $rowpat = $db->sql_fetchrow($db->sql_query('SELECT title 
 		   											   FROM '.$prefix.'_partners 
 													   WHERE id_partner='.$id_partner));
-           $partners = stripslashes(check_html($rowpat['title'], "nohtml"),MYSQL_ASSOC);
+           $partners = stripslashes(check_html($rowpat['title'], "nohtml"));
         if (empty($partners)) { $partners = $aid; }
 		   $rowserv = $db->sql_fetchrow($db->sql_query('SELECT imgfile,attachfile 
 		   											   FROM '.$prefix.'_catalog_service 
