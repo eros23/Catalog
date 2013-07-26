@@ -57,7 +57,7 @@ if (!defined('ADMIN_FILE')) {
       $click_memo = "onclick=\"popupWindow('" . $memo_view . "', 'Aiuto', 440, 450, 1)\"";
       $ord_view = '' . $admin_file . '.php?op=catalog_ordershow&amp;date=' . $date . '&amp;order_number=' . $order_number . '';
       $click_ord = "onclick=\"popupWindow('" . $ord_view . "', 'Aiuto', 440, 450, 1)\"";
-      $resuser = $db->sql_fetchrow($db->sql_query('SELECT * FROM ' . $prefix . '_users WHERE user_id=' . $uname . ''));
+      $resuser = $db->sql_fetchrow($db->sql_query('SELECT * FROM ' . $prefix . '_users WHERE user_id=' . $uname . ''),MYSQL_ASSOC);
       $user_id = $resuser['user_id'];
       $realname = $resuser['realname'];
       $familyname = $resuser['familyname'];
@@ -132,11 +132,11 @@ if (!defined('ADMIN_FILE')) {
 							   ORDER BY uid DESC 
 							   LIMIT ' . $ofsbgn . ',' . $ofsppg . ''); ?>
 	<ul class="list user_list">
-      <?php while ($rowuser = $db->sql_fetchrow($resuser)) {
+      <?php while ($rowuser = $db->sql_fetchrow($resuser,MYSQL_ASSOC)) {
       $uid = intval($rowuser['uid']);
-      $first_name = trim(stripslashes(check_html($rowuser['first_name'], "nohtml")));
-      $last_name = trim(stripslashes(check_html($rowuser['last_name'], "nohtml")));
-      $user_email = trim(stripslashes(check_html($rowuser['user_email'], "nohtml")));
+      $first_name = stripslashes(check_html($rowuser['first_name'], "nohtml"));
+      $last_name = stripslashes(check_html($rowuser['last_name'], "nohtml"));
+      $user_email = stripslashes(check_html($rowuser['user_email'], "nohtml"));
       $verified = intval($rowuser['verified']); ?>
 	  <li>
         <?php if ($verified == 1) {
@@ -144,8 +144,8 @@ if (!defined('ADMIN_FILE')) {
       } elseif ($verified == 0) {
         echo '<span class="label label-success pull-right sl_status">offline</span>';
       } ?>
-		<a href="#" class="sl_name"><?php echo '' . $first_name . ' ' . $last_name . ''; ?></a><br />
-		<small class="s_color sl_email"><?php echo '' . $user_email . ''; ?></small>
+		<a href="#" class="sl_name"><?php echo $first_name . ' ' . $last_name; ?></a><br />
+		<small class="s_color sl_email"><?php echo $user_email; ?></small>
 	  </li>
 	  <?php } ?>
 	</ul>

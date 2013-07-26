@@ -19,11 +19,14 @@ define('_CATALOG_TOTAL',			'Totale');
 define('_CATALOG_PAGELIST',			'Elenco Prodotti');
 define('_CATALOG_PAGEEMPTY',		'<strong>ATTENZIONE!!</strong><br />Non ci sono Prodotti pubblicati nel database.');
 define('_CATALOG_CODE',				'Codice Prodotto');
+define('_CATALOG_CATEGORY',			'Categoria');
+define('_CATALOG_ICON',             'Icona');
 define('_CATALOG_ACTIVE',			'Attivo');
 define('_CATALOG_NOACTIVE',			'Disattivo');
 define('_CATALOG_ONSALE',			'In Offerta');
 define('_CATALOG_SUSPENDED',		'Stop Sale');
 define('_CATALOG_SOLDOUT',			'Esaurito');
+define('_CATALOG_HITS',             'Hits');
 
 // PRODUCT ADD
 define('_CATALOG_PAGEADD',			'Aggiungi Prodotto');
