@@ -38,6 +38,20 @@ define('_CATALOG_TYPOCAT',			'Seleziona Categoria');
 define('_CATALOG_SELECT',			'Seleziona');
 define('_CATALOG_QUOTAORG',			'Nostra programmazione');
 define('_CATALOG_QUOTAINT',			'Pacchetto TO');
+define('_CATALOG_SELECTTEMPLATE',	'Modello visualizzazione Prodotto');
+define('_CATALOG_BLKSHOW',			'Visualizzazione Blocchi');
+define('_CATALOG_BLKNONE',			'Non mostrare nessun Blocco');
+define('_CATALOG_BLKLEFT',			'Mostra solo i Blocchi di Sinistra');
+define('_CATALOG_BLKRIGHT',			'Mostra solo i Blocchi di Destra');
+define('_CATALOG_BLKBOTH',			'Mostra entrambi i Blocchi');
+define('_CATALOG_PRIVATE',			'Prodotto privato');
+define('_CATALOG_VIEWPRIV',			'Chi può Vederlo?');
+define('_CATALOG_MVALL',			'Tutti');
+define('_CATALOG_MVADMIN',			'Solo Amministratori');
+define('_CATALOG_MVUSERS',			'Solo Utenti Registrati');
+define('_CATALOG_MVANON',			'Solo Utenti Anonimi');
+define('_CATALOG_MVGROUPS',			'Solo Gruppi');
+define('_CATALOG_PARENT',			'Prodotto Parente di');
 
 
 define('_CATALOG_TAGS', 			'Meta Title');
