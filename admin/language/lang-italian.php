@@ -27,9 +27,22 @@ define('_CATALOG_ONSALE',			'In Offerta');
 define('_CATALOG_SUSPENDED',		'Stop Sale');
 define('_CATALOG_SOLDOUT',			'Esaurito');
 define('_CATALOG_HITS',             'Hits');
+define('_CATALOG_DATEINS',          'Data Inserimento');
+define('_CATALOG_LANGUAGE',         'Lingua');
 
 // PRODUCT ADD
 define('_CATALOG_PAGEADD',			'Aggiungi Prodotto');
+define('_CATALOG_TYPOLOGY',			'Tipologia Prodotto');
+define('_CATALOG_TYPOQUOTA',		'Tipologia Pratica');
+define('_CATALOG_TYPOCAT',			'Seleziona Categoria');
+define('_CATALOG_SELECT',			'Seleziona');
+define('_CATALOG_QUOTAORG',			'Nostra programmazione');
+define('_CATALOG_QUOTAINT',			'Pacchetto TO');
+
+
+define('_CATALOG_TAGS', 			'Meta Title');
+define('_CATALOG_METADESCRIPTION', 	'Meta Descrizione');
+define('_CATALOG_METAKEYS', 		'Parole chiavi');
 
 // PRODUCT EDIT
 define('_CATALOG_PAGEEDIT',			'Modifica Prodotto');
@@ -60,6 +73,10 @@ define('_CATALOG_HOURS',			'ore');
 define('_CATALOG_ORDERBY',			'Ordina per');
 define('_CATALOG_ORDBYNAME',		'... Nome');
 define('_CATALOG_ORDBYSTATUS',		'... Stato');
+
+// HELP
+define('_CATALOG_HELPMETADESC',		'Inserite una descrizione breve (max. 255 car.) della pagina. Questa descrizione &egrave; molto importante per l\'indicizzazione nei motori di ricerca, (Google, etc).');
+define('_CATALOG_HELPMETAKEY',		'Inserite le paroli chiavi (max. 255 car.) per i motori di ricerca. Le parole chiavi devono essere separati da virgole e possono essere sia singole che multiple, (es. vacanze, viaggi di lusso, etc).');
 
 
 ?>

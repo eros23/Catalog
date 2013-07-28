@@ -32,9 +32,9 @@ function catalog_pagelist() {
         <th><?php echo _TITLE; ?></th>
         <th><?php echo _WEIGHT; ?></th>
         <th><?php echo _CATALOG_CODE; ?></th>
-        <th><?php echo _DATEINS; ?></th>
+        <th><?php echo _CATALOG_DATEINS; ?></th>
         <th><?php echo _CATALOG_CATEGORY; ?></th>
-        <th><?php echo _LANGUAGE; ?></th>
+        <th><?php echo _CATALOG_LANGUAGE; ?></th>
         <th><?php echo _STATUS; ?></th>
         <th><?php echo _CATALOG_HITS; ?></th>
         <th><?php echo _FUNCTIONS; ?></th>
