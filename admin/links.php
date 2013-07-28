@@ -9,8 +9,8 @@
 
 
 # =================================================================================== #
-  global $admin_file;
-         adminmenu(''.$admin_file.'.php?op=catalog_main&daynum=30', ''._CATALOG_LINK.'', 'catalog.png');
+  global $admin_file,$navbar;
+         adminmenu(''.$admin_file.'.php?op=catalog_main&daynum=30', ''._CATALOG_LINK.'', 'catalog.png',$navbar);
 
 
 ?>
